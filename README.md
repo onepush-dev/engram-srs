@@ -1,6 +1,6 @@
 # Engram Flashcards (SRS) — self-hosted spaced-repetition flashcards with FSRS scheduling and Anki import. Deploy on Railway with one click.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/deploy/TEMPLATE_CODE)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/deploy/ctNG8Q)
 
 [Engram](https://github.com/bestnite/engram) (AGPL-3.0, by bestnite) is a web flashcard app in the spirit of Anki:
 decks, note types and card templates, FSRS scheduling with an on-server parameter optimizer, `.apkg` import/export,
