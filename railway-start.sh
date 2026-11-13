@@ -17,7 +17,7 @@ if [ -n "$ENGRAM_ADMIN_PASSWORD" ] && [ ! -f "$MARK" ]; then
   BODY=$(printf '{"username":"%s","email":"%s","display_name":"Administrator","password":"%s"}' \
     "$ENGRAM_ADMIN_USER" "$BOOTSTRAP_ADMIN_EMAIL" "$ENGRAM_ADMIN_PASSWORD")
   code=$(curl -sS -o /tmp/setup.out -w '%{http_code}' -X POST http://127.0.0.1:18080/api/v1/auth/setup \
-    -H 'Content-Type: application/json' -H "X-CSRF-Token: $T" -b "csrf_double=$T" --data-binary "$BODY" || true)
+    -H 'Content-Type: application/json' -H "Accept-Language: ${ENGRAM_ADMIN_LOCALE:-en}" -H "X-CSRF-Token: $T" -b "csrf_double=$T" --data-binary "$BODY" || true)
   case "$code" in
     200) echo "railway-start: administrator '$ENGRAM_ADMIN_USER' created from ENGRAM_ADMIN_PASSWORD"; touch "$MARK" ;;
     404) echo "railway-start: an administrator already exists, nothing to do"; touch "$MARK" ;;

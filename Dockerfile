@@ -15,6 +15,7 @@ ENV HTTP_ADDR=0.0.0.0:8080 \
     MEDIA_DIR=/data/media \
     TRUSTED_PROXIES=100.64.0.0/10 \
     ENGRAM_ADMIN_USER=admin \
+    ENGRAM_ADMIN_LOCALE=en \
     BOOTSTRAP_ADMIN_EMAIL=admin@example.com
 EXPOSE 8080
 ENTRYPOINT ["/usr/local/bin/railway-start.sh"]
